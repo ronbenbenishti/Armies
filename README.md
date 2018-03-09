@@ -1,5 +1,5 @@
-# Armies
-## “Armies” – by Ron, Mor, , Irena, Eyal, Sergei and Sophia
+# **Armies**
+### by Ron, Mor, , Irena, Eyal, Sergei and Sophia
 
 We decided to create an Antivirus, a program that scans incoming files and finds out if the file is a virus or infected with Malware.
 We aim to scan a specific file which has been downloaded from the internet.
