@@ -1,5 +1,5 @@
 # **Armies**
-### by Ron, Mor, , Irena, Eyal, Sergei and Sophia
+### *by Ron, Mor, , Irena, Eyal, Sergei and Sophia*
 
 We decided to create an Antivirus, a program that scans incoming files and finds out if the file is a virus or infected with Malware.
 We aim to scan a specific file which has been downloaded from the internet.
@@ -12,7 +12,8 @@ We will be updating our program from the following site:
 
 **SCAN:**
 The Virus scanner will compare the file hash to the built-in, known hashes and will make a determination on the file credibility.
-THREAT DETECTION:
+
+**THREAT DETECTION:**
 This means that the antivirus program can scan your entire computer in search of viruses.
 
 **ANALYSE:**
