@@ -1,7 +1,9 @@
 # **Armies**
-### *by Ron, Mor, , Irena, Eyal, Sergei and Sophia*
+Start script with Armies_gui.py
 
-We decided to create an Antivirus, a program that scans incoming files and finds out if the file is a virus or infected with Malware.
+### *by Ron, Irena, Eyal, Sergei and Sophia*
+
+Armies is a Maleware indicator, a program that scans incoming files and finds out if the file is a virus or infected with Malware.
 We aim to scan a specific file which has been downloaded from the internet.
 The features we will be deploying in this exercise:
 
@@ -20,14 +22,11 @@ This means that the antivirus program can scan your entire computer in search of
 Analyse suspicious files and URLs to detect types of malware including viruses, worms, and Trojans.
 
 
-**We will be using the following:**
-*	Variables
+**We will be using the following:***	Variables
 *	While / For loops
 *	If/Else Statements
 *	lists
 *	Boolean
 *	Input and Output
-*	Integer
-*	String
-*	Length
-*	Print
+*	Modules
+*	GUI Interface
