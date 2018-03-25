@@ -14,6 +14,7 @@ except ImportError:
 
 Red = '\033[91m'
 Green = '\033[92m'
+Default = '\033[99m'
 
 def vp_start_gui():
     global val, w, root
@@ -55,7 +56,7 @@ class Armies:
             numoflinks=int(splitnumber[1])
             armies.Linksmaker(numoflinks-1)
         except:
-            print(Red+"Error: Please select links quantity")
+            print(Red+"Error: Please select links quantity"+Default)
 
     def QuitYN(self):
         sure= messagebox.askyesno("Armies","Are you sure do you want to quit?")
@@ -66,7 +67,7 @@ class Armies:
         try:
             armies.Update()
         except:
-            print(Red+"Error: Links file is empty")
+            print(Red+"Error: Links file is empty"+Default)
 
     def __init__(self, top=None):
         _bgcolor = '#d9d9d9'
@@ -97,7 +98,7 @@ class Armies:
 
         self.LabelUpdate = Label(self.TFrameUpdate)
         self.LabelUpdate.place(relx=0.03, rely=0.07, height=26, width=301)
-        self.LabelUpdate.configure(background="#d9d9d9", text='''UPDATE''')
+        self.LabelUpdate.configure(background="#d9d9d9", text="UPDATE")
 
         self.BtnUpdateMD5 = ttk.Button(self.TFrameUpdate)
         self.BtnUpdateMD5.place(relx=0.06, rely=0.59, height=30, width=289)
@@ -164,7 +165,7 @@ class Armies:
 
         self.LabelVersion = Label(top)
         self.LabelVersion.place(relx=0.05, rely=0.92, height=26, width=82)
-        self.LabelVersion.configure(background="#d9d9d9", text="Armies v2.0")
+        self.LabelVersion.configure(background="#d9d9d9", text="Armies v2.1")
 
 
 
