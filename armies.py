@@ -34,12 +34,12 @@ def Update():
     f = open(file, "w")
     num = 1
     for link in readlines:
-        print(Green+"Opening URL #" + str(num)+"...")
+        print(Green+"Opening URL "+Blue+"#"+str(num)+Default)
         urlopen = ur.urlopen(link)
-        print(Green+"Reading URL #" + str(num)+"...")
+        print(Green+"Reading URL "+Blue+"#"+str(num)+Default)
         db = str(urlopen.read())
         dblist = db.split("\\n")
-        print(Green+"Writing to %s" % (file))
+        print(Green+"Writing to "+Blue+file+Default)
         del dblist[0:6]
         for x in dblist:
             f.write(x + "\n")
@@ -48,7 +48,7 @@ def Update():
     f = open(file, "r")
     HowMuchMD5 = len(f.readlines())
     print(Green+"MD5 Quantity: "+Blue+str(HowMuchMD5))
-    print(Green+"Completed.\n")
+    print(Green+"Completed.\n"+Default)
 
 # Generate MD5
 def MD5(file):
@@ -74,7 +74,7 @@ def SingleScan(filetoscan):
             print(Green+"No MD5 match results! - (File is OK)\n"+Default+"-"*34)
 
     except:
-        print(Red+"Error: File not selected..")
+        print(Red+"Error: File not selected.."+Default)
 
 oklist=[]
 badlist=[]
@@ -87,16 +87,16 @@ def Scan(filetoscan):
         md5code = MD5(filetoscan)
         print(Default+"%s | MD5: %s" % (filetoscan, md5code))
         if md5code+'\n' in md5table:
-            print(Red+"MD5 match has been found! - FILE IS INFECTED!!!")
+            print(Red+"MD5 match has been found! - FILE IS INFECTED!!!"+Default)
             badlist.append(filetoscan)
         else:
             oklist.append("Ok")
     except:
-        print(Red+"Error: File not found..")
+        print(Red+"Error: File not found.."+Default)
 
 
 def Scanpath(pathToFolder, keyWord):
-    print(Green+"Starting to scan..\nPath: %s" % (pathToFolder))
+    print(Green+"Starting to scan..\nPath: "+Blue+pathToFolder+Default)
     import os
     _pathToFiles = []
     _fileNames = []
@@ -122,16 +122,16 @@ def Scanpath(pathToFolder, keyWord):
     ok=len(oklist)
     bad=len(badlist)
     if scanned > 0:
-        print("\n"+Bold+str(scanned)+Default+" files were found is searched folder(s)\n"+Bold+str(ok)+Default+" file(s) is OK and "+Bold+str(bad)+Default+" is Infected")
+        print("\n"+Blue+str(scanned)+Default+" files were found is searched folder(s)\n"+Blue+str(ok)+Default+" file(s) is OK and "+Blue+str(bad)+Default+" is Infected")
         if bad > 0:
-            print(Red+Bold+"*** WARNING! %s infected file(s) has been found on your PC" % (bad))
+            print(Red+Bold+"*** WARNING! %s infected file(s) has been found on your PC" % (bad)+Default)
             print(Red+ "Infected file(s):")
             for badfile in badlist:
                 print(badfile)
         else:
-            print(Green+"Everything is OK, No infected file(s) was found.")
+            print(Green+"Everything is OK, No infected file(s) was found."+Default)
     else:
-        print(Red+"Error: Path is missing")
+        print(Red+"Error: Path is missing"+Default)
     return _pathToFiles, _fileNames
 
 
