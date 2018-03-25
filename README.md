@@ -1,4 +1,4 @@
-# **Armies**
+# **Armies** v2.1
 Start script with Armies_gui.py
 
 ### *by Ron, Irena, Eyal, Sergei and Sophia*
