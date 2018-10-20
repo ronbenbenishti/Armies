@@ -22,7 +22,8 @@ This means that the antivirus program can scan your entire computer in search of
 Analyse suspicious files and URLs to detect types of malware including viruses, worms, and Trojans.
 
 
-**We will be using the following:***	Variables
+**We will be using the following:**
+*	Variables
 *	While / For loops
 *	If/Else Statements
 *	lists
